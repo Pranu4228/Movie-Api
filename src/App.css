@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@200;300&family=Poppins:wght@300&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Warnes&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Kalnia', serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    font-family: 'Kalnia', serif;
+    font-family: 'Poppins', sans-serif;
+} 
+
+body {
+   
+background: linear-gradient(25deg, white 50%, black 50%);
+font-family: 'Kalnia', serif;
+}
+
+.app {
+    padding: 4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+  .App b{
+    font-size: 5rem;
+    margin-left: 32rem;
+    color: #fee;
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+  }
+  .App b span{
+    animation: blink linear infinite 2s;
+  }
+  .App b span:nth-of-type(2){
+    animation: blink linear infinite 3s;
+  }
+  @keyframes blink {
+    78% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    79%{
+       color: #333;
+    }
+    80% {
+      
+      text-shadow: none;
+    }
+    81% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    82% {
+      color: #333;
+      text-shadow: none;
+    }
+    83% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    92% {
+      color: #333;
+      text-shadow: none;
+    }
+    92.5% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+  }
+  
+.search {
+    width: 43rem;  
+    margin-left: 30rem; 
+    height: 3rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 1rem;
+    border-radius: 3rem;
+    background: #1f2123;  
+
+    
+} 
+
+.search input {
+ width: 45rem;
+height: 3rem; 
+    color: white;
+    background: #1f2123;
+    border-radius: 20px;
+    outline: none;
+    padding-left: 1rem;
+    font-size: 1rem;
+}
+
+.search img {
+    display: flex;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    margin-right:1rem;
+}
+
+.empty {
+    width: 100%;
+    margin-top: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty h2 {
+    font-size: 1.25rem;
+    color: #f9d3b4;
+    font-family: var(--font-raleway);
+}
+
+.container {
+    width: 100%;
+    margin-top: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.movie {
+    width: 310px;
+    height: 460px;
+    margin: 1.5rem;
+
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: none;
+
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+}
+
+.movie div:nth-of-type(1) {
+    position: absolute;
+    padding: 16px;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+    color: white;
+}
+
+.movie:hover {
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1); 
+    transform: scale(1.05, 1.05);
+}
+
+.movie div:nth-of-type(2) {
+    width: 100%;
+    height: 100%;
+}
+
+.movie div:nth-of-type(2) img {
+    height: 100%;
+    width: 100%;
+}
+
+.movie div:nth-of-type(3) {
+    z-index: 2;
+    background-color: black;
+    padding: 16px 24px 24px 24px;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.movie div:nth-of-type(3) span {
+    font-family: 'Kalnia', serif; 
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: white;
+}
+
+.movie div:nth-of-type(3) h3 {
+    margin-top: 5px;
+    font-family: 'Kalnia', serif;
+    color: #9ef3fc;
+}
+
+.movie:hover div:nth-of-type(2) {
+    height: 100%;
+    opacity: 0.3;
+}
+
+.movie:hover div:nth-of-type(3) {
+    background-color: transparent;
+} 
+
+.movie:hover div:nth-of-type(1) {
+    opacity: 1;
+}
+
+.footer{
+    width: 100%;
+    height: 3rem;
+    background: black;
+}
+.footer p{
+    color: white;
+    text-align: center;
+    padding-top: 1rem;
+    font-family: 'Kalnia', serif;
+    font-size: large;
+}
+
+@media screen and (max-width: 600px) {
+    .app {
+        padding: 4rem 2rem;
+    }
+
+    .search {
+        padding: 1rem 1.75rem;
+        width: 100%;
+    }
+
+    .search input {
+        font-size: 1rem;
+    }
+
+    .search img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .app {
+        padding: 4rem 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        margin-top: 2rem;
+    }
+
+    .movie {
+        width: "100%";
+        margin: 1rem;
+    }
+}
